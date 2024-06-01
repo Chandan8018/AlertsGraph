@@ -9,7 +9,7 @@ import {
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../redux/theme/themeSlice";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function HeaderComp() {
   const path = useLocation().pathname;
@@ -43,11 +43,11 @@ export default function HeaderComp() {
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href='/' active={path === "/"}>
-          Home
+        <NavbarLink active={path === "/"} as={"div"}>
+          <Link to='/'>Home</Link>
         </NavbarLink>
-        <NavbarLink href='/dashboard' active={path === "/dashboard"}>
-          Dashboard
+        <NavbarLink active={path === "/dashboard"} as={"div"}>
+          <Link to='/dashboard'>Dashboard</Link>
         </NavbarLink>
       </NavbarCollapse>
     </Navbar>
