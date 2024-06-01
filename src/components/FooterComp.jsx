@@ -35,14 +35,26 @@ export function FooterComp() {
             <div>
               <FooterTitle title='about' />
               <FooterLinkGroup col>
-                <FooterLink href='#'>Flowbite</FooterLink>
-                <FooterLink href='#'>Tailwind CSS</FooterLink>
+                <FooterLink href='/'>Home</FooterLink>
+                <Footer.Link
+                  href='/dashboard'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Dashboard
+                </Footer.Link>
               </FooterLinkGroup>
             </div>
             <div>
               <FooterTitle title='Follow us' />
               <FooterLinkGroup col>
-                <FooterLink href='#'>Github</FooterLink>
+                <Footer.Link
+                  href='https://www.github.com/Chandan8018'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Github
+                </Footer.Link>
                 <FooterLink href='#'>Discord</FooterLink>
               </FooterLinkGroup>
             </div>
@@ -57,12 +69,22 @@ export function FooterComp() {
         </div>
         <FooterDivider />
         <div className='w-full sm:flex sm:items-center sm:justify-between'>
-          <FooterCopyright href='#' by='Flowbite™' year={2022} />
+          <Footer.Copyright
+            className='text-black dark:text-white'
+            href='#'
+            by="Chandan's Portfolio"
+            year={new Date().getFullYear()}
+          />
           <div className='mt-4 flex space-x-6 sm:mt-0 sm:justify-center'>
             <FooterIcon href='#' icon={BsFacebook} />
             <FooterIcon href='#' icon={BsInstagram} />
             <FooterIcon href='#' icon={BsTwitter} />
-            <FooterIcon href='#' icon={BsGithub} />
+            <FooterIcon
+              href='https://www.github.com/Chandan8018'
+              target='_blank'
+              rel='noopener noreferrer'
+              icon={BsGithub}
+            />
             <FooterIcon href='#' icon={BsDribbble} />
           </div>
         </div>

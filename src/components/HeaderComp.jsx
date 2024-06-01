@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../redux/theme/themeSlice";
 import { useLocation } from "react-router-dom";
 
-export default function Header() {
+export default function HeaderComp() {
   const path = useLocation().pathname;
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.theme);
